@@ -173,3 +173,22 @@ idx = comments.findIndex((comment) => {
     return (comment.id === 123523);
 });
 console.log('Exercise 9 my result: ', idx);
+console.log();
+
+
+// Level Up exercise 1: Array.prototype.reduce()
+let totalYearsLived = 0;
+totalYearsLived = inventors.reduce(function(accumulator, inventor){
+    return (accumulator + (inventor.passed - inventor.year));
+}, 0);
+console.log('Level Up 1 my result: ', totalYearsLived);
+console.log();
+
+
+// Level Up exercise 2: Array.prototype.reduce()
+let travelMethodCounts = travelMethods.reduce((accumulator, method) => {
+    accumulator[method] = (accumulator[method] || 0) + 1;
+    return accumulator;
+  }, {});
+console.log('Level Up 2 my result: ', travelMethodCounts);
+console.log();
